@@ -25,6 +25,7 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
-        "postcss": "^8.1.14"
+        "pusher-js": "^7.0.3",
+        "simple-peer": "^9.11.0"
     }
 }

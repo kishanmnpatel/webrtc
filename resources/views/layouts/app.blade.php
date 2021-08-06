@@ -12,6 +12,15 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    @if(auth()->user())
+    <script>
+        window.user = {
+            id: {{ auth()->id() }},
+            name: "{{ auth()->user()->name }}"
+        };
+        window.csrfToken = "{{ csrf_token() }}";
+    </script>
+    @endif
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
